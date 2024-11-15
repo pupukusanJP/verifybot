@@ -1,0 +1,9 @@
+{
+    "builds": [
+      {
+        "src": "bot.py",
+        "use": "@vercel/python"
+      }
+    ]
+  }
+  
