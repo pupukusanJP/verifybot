@@ -1,5 +1,9 @@
 import discord
+import os
 from discord.ext import commands
+
+# 環境変数からトークンを取得
+TOKEN = os.getenv("DISCORD_TOKEN")
 
 # Intentの設定
 intents = discord.Intents.default()
@@ -62,4 +66,4 @@ async def verify(interaction: discord.Interaction):
         await interaction.response.send_message(f"⚠️ ロール付与中にエラーが発生しました: {e}", ephemeral=False)
 
 # BOT起動
-bot.run('YOUR_DISCORD_BOT_TOKEN')  # ボットのトークンをここに入力
+bot.run(TOKEN)  # 環境変数からボットトークンを使う
